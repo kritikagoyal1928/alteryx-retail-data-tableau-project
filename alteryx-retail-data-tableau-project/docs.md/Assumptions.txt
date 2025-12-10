@@ -1,0 +1,14 @@
+Assumptions Taken
+-----------------
+
+1. WeekStart is assumed to be Monday, and WeekEnd is calculated as WeekStart + 6 days.
+
+2. Inventory SnapshotDate always occurs on Monday, so it aligns directly with the WeekStart date.
+
+3. Sales data is assumed to follow the same Monday–Sunday weekly structure, ensuring consistent joins between sales and inventory.
+
+4. Any null Net Sales values in the sales dataset are treated as 0, assuming no sales occurred.
+
+5. Fields such as On_Hand, On_Order, and Safety Stock may contain a dash (“–”) in the raw data; these are interpreted as 0 for calculation purposes.
+
+6. For some Store ID + Material combinations, data is missing for the week of 7/14/2025. These will appear as blank gaps in the final dashboard.
